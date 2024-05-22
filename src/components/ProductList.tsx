@@ -36,6 +36,9 @@ const ProductList = async ({
     );
   // .find();
 
+
+
+  console.log(productQuery)
   if (searchParams?.sort) {
     const [sortType, sortBy] = searchParams.sort.split(" ");
 
@@ -52,6 +55,7 @@ const ProductList = async ({
   return (
     <div className="mt-12 flex gap-x-8 gap-y-16 justify-between flex-wrap">
       {res.items.map((product: products.Product) => (
+
         <Link
           href={"/" + product.slug}
           className="w-full flex flex-col gap-4 sm:w-[45%] lg:w-[22%]"
