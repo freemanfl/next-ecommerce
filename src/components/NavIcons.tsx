@@ -56,11 +56,11 @@ const NavIcons = () => {
     router.push(logoutUrl);
   };
 
-
   const { cart, counter, getCart } = useCartStore();
 
   useEffect(() => {
     getCart(wixClient);
+    console.log(cart);
   }, [wixClient, getCart]);
 
   return (
